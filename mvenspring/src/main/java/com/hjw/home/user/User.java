@@ -2,15 +2,17 @@ package com.hjw.home.user;
 
 import java.io.Serializable;
 
-public class User implements Serializable{
-	private int id;
+import com.hjw.home.core.entity.BaseEntity;
+
+public class User extends BaseEntity implements Serializable{
+	private Long id;
 	private String name;
 	private String sex;
 	private int age;
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {

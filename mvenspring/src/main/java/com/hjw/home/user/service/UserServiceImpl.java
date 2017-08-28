@@ -6,18 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.hjw.home.user.User;
-import com.hjw.home.user.dao.UserMapper;
+import com.hjw.home.user.dao.UserDao;
 @Service
 public class UserServiceImpl implements UserService{
 	@Autowired
-	private UserMapper userDao;
+	private UserDao userDao;
 
 	@Override
 	public void saveuser(User user)throws RuntimeException 
- {
-		userDao.saveuser(user);	
-		userDao.saveuser(user);
-		this.getalluser();
+    {
+		userDao.insert(user);
 		
 	}
 
